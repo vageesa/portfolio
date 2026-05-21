@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "title": "Tuning the Engine",
+      "category": "Motorsport",
+      "date": "May 18, 2026",
+      "excerpt": "The joy of fixing things with your own hands."
+    },
+    {
+      "title": "Late Night Gaming",
+      "category": "Gaming",
+      "date": "May 12, 2026",
+      "excerpt": "Why retro games still hold up today."
+    },
+    {
+      "title": "Synthwave Vibes",
+      "category": "Music",
+      "date": "May 05, 2026",
+      "excerpt": "Curating the perfect playlist for coding."
+    },
+    {
+      "title": "Anime Aesthetics",
+      "category": "Culture",
+      "date": "April 30, 2026",
+      "excerpt": "How 90s anime influences modern design."
+    }
+  ]
+}

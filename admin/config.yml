@@ -1,0 +1,36 @@
+backend:
+  name: git-gateway
+
+local_backend: true
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blogs"
+    label: "Blogs"
+    files:
+      - label: "Professional Blogs"
+        name: "professional"
+        file: "data/professional.json"
+        fields:
+          - label: "Posts"
+            name: "posts"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Category", name: "category", widget: "string"}
+              - {label: "Date", name: "date", widget: "string"}
+              - {label: "Excerpt", name: "excerpt", widget: "text"}
+      - label: "Hobby Blogs"
+        name: "hobby"
+        file: "data/hobby.json"
+        fields:
+          - label: "Posts"
+            name: "posts"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Category", name: "category", widget: "string"}
+              - {label: "Date", name: "date", widget: "string"}
+              - {label: "Excerpt", name: "excerpt", widget: "text"}

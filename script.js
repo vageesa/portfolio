@@ -148,79 +148,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Blog System ---
     const isHobby = document.body.classList.contains('hobby-mode');
-    
-    const blogData = isHobby ? [
-        {
-            title: "Tuning the Engine",
-            category: "Motorsport",
-            date: "May 18, 2026",
-            excerpt: "The joy of fixing things with your own hands."
-        },
-        {
-            title: "Late Night Gaming",
-            category: "Gaming",
-            date: "May 12, 2026",
-            excerpt: "Why retro games still hold up today."
-        },
-        {
-            title: "Synthwave Vibes",
-            category: "Music",
-            date: "May 05, 2026",
-            excerpt: "Curating the perfect playlist for coding."
-        },
-        {
-            title: "Anime Aesthetics",
-            category: "Culture",
-            date: "April 30, 2026",
-            excerpt: "How 90s anime influences modern design."
-        }
-    ] : [
-        {
-            title: "Building Systems That Scale",
-            category: "Product",
-            date: "May 16, 2026",
-            excerpt: "Observations on structuring startup workflows."
-        },
-        {
-            title: "Neon Aesthetics in Web3",
-            category: "Design",
-            date: "May 10, 2026",
-            excerpt: "Why dark mode and glow effects dominate crypto UI."
-        },
-        {
-            title: "Late Night Thoughts on Evangelion",
-            category: "Culture",
-            date: "May 02, 2026",
-            excerpt: "Analyzing the visual language of 90s mecha anime."
-        },
-        {
-            title: "The Art of the Brutalist Web",
-            category: "Engineering",
-            date: "April 28, 2026",
-            excerpt: "Returning to semantic HTML and bold borders."
-        }
-    ];
-
+    const dataFile = isHobby ? 'data/hobby.json' : 'data/professional.json';
     const blogContainer = document.getElementById('blog-container');
     
     if (blogContainer) {
-        blogData.forEach(post => {
-            const article = document.createElement('article');
-            article.className = 'blog-card scroll-reveal';
-            
-            article.innerHTML = `
-                <div class="blog-info">
-                    <span class="blog-meta">${post.category} // ${post.date}</span>
-                    <h3>${post.title}</h3>
-                    <p>${post.excerpt}</p>
-                </div>
-            `;
-            
-            blogContainer.appendChild(article);
-        });
-        
-        // Re-observe newly added elements
-        const newReveals = blogContainer.querySelectorAll('.scroll-reveal');
-        newReveals.forEach(el => revealObserver.observe(el));
+        fetch(dataFile)
+            .then(response => response.json())
+            .then(data => {
+                const posts = data.posts || [];
+                posts.forEach(post => {
+                    const article = document.createElement('article');
+                    article.className = 'blog-card scroll-reveal';
+                    
+                    article.innerHTML = `
+                        <div class="blog-info">
+                            <span class="blog-meta">${post.category} // ${post.date}</span>
+                            <h3>${post.title}</h3>
+                            <p>${post.excerpt}</p>
+                        </div>
+                    `;
+                    
+                    blogContainer.appendChild(article);
+                });
+                
+                // Re-observe newly added elements
+                const newReveals = blogContainer.querySelectorAll('.scroll-reveal');
+                newReveals.forEach(el => revealObserver.observe(el));
+            })
+            .catch(error => {
+                console.error("Error loading blog posts:", error);
+                blogContainer.innerHTML = '<p>Unable to load blog posts at this time.</p>';
+            });
     }
 });

@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "title": "Building Systems That Scale",
+      "category": "Product",
+      "date": "May 16, 2026",
+      "excerpt": "Observations on structuring startup workflows."
+    },
+    {
+      "title": "Neon Aesthetics in Web3",
+      "category": "Design",
+      "date": "May 10, 2026",
+      "excerpt": "Why dark mode and glow effects dominate crypto UI."
+    },
+    {
+      "title": "Late Night Thoughts on Evangelion",
+      "category": "Culture",
+      "date": "May 02, 2026",
+      "excerpt": "Analyzing the visual language of 90s mecha anime."
+    },
+    {
+      "title": "The Art of the Brutalist Web",
+      "category": "Engineering",
+      "date": "April 28, 2026",
+      "excerpt": "Returning to semantic HTML and bold borders."
+    }
+  ]
+}
