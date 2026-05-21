@@ -216,8 +216,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     blogContainer.appendChild(article);
                 });
                 
-                // Re-observe newly added elements
-                const newReveals = blogContainer.querySelectorAll('.scroll-reveal');
+                // Re-observe newly added elements across all dynamic containers
+                const newReveals = document.querySelectorAll('#experience-container .scroll-reveal, #projects-container .scroll-reveal, #blog-container .scroll-reveal, .project-card.scroll-reveal');
                 newReveals.forEach(el => revealObserver.observe(el));
             })
             .catch(error => {
