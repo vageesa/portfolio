@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- Hero Subtext Word Bulge Effect ---
-    const heroSub = document.querySelector('.hero-sub p');
-    if (heroSub) {
+    const heroSubs = document.querySelectorAll('.hero-sub p');
+    heroSubs.forEach(heroSub => {
         const text = heroSub.textContent;
         heroSub.innerHTML = text.split(' ').map(word => `<span class="hover-word">${word}</span>`).join(' ');
-    }
+    });
 
     // --- Custom Cursor ---
     const cursor = document.querySelector('.custom-cursor');
