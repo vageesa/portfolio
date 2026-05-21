@@ -1,33 +1,43 @@
 {
-  "about_text": "A student from Indian Institute of Information Technology Nagpur",
+  "about_text": "Computer Science undergraduate at IIIT Nagpur with proven experience in talent coordination, resource planning, cross-functional collaboration, and data analysis. Google Student Ambassador, GDG Co-Lead, and founder of a student organisation. Brings extreme ownership, a seeker mindset, and passionate work ethic to every role.",
   "experience": [
     {
-      "year": "2026 - Present",
-      "title": "Lead Engineer @ Neural Forge",
-      "description": "Architecting decentralized data models. Rebuilt the core matching engine from scratch, reducing latency by 40%."
+      "year": "Jan 2026 - Feb 2026",
+      "title": "Product Intern @ The Global Church Initiative",
+      "description": "Contributed to product planning, task execution, and cross-functional project delivery. Recognised by the CEO for strong commitment, professionalism, and on-time delivery of responsibilities."
     },
     {
-      "year": "2024 - 2026",
-      "title": "Full Stack Developer @ VoidTech",
-      "description": "Spearheaded the dark-mode first design system. Developed the primary consumer facing dashboard used by 10k+ daily active users."
+      "year": "2024 - Present",
+      "title": "Google Student Ambassador, IIIT Nagpur",
+      "description": "Planned and executed structured outreach initiatives, coordinated resources, and aligned campus talent with Google programme goals while maintaining regular stakeholder communication."
     },
     {
-      "year": "2023 - 2024",
-      "title": "Freelance Creator",
-      "description": "Built bespoke web experiences for boutique design agencies. Focused on WebGL and high-performance animations."
+      "year": "2023 - Present",
+      "title": "Co-Lead, Google Developer Group (GDG)",
+      "description": "Coordinated across design, logistics, content, and outreach sub-teams; managed talent allocation and resource planning. Analysed post-event participation data to identify trends and forecast resource needs."
+    },
+    {
+      "year": "2024",
+      "title": "Hospitality Lead, Abhivyakti Cultural Fest",
+      "description": "Managed talent allocation and demand forecasting for a 1000+ attendee event. Coordinated across five departments and maintained accurate operational documentation."
+    },
+    {
+      "year": "2023 - Present",
+      "title": "Founder and Lead, Synergy Esports Club",
+      "description": "Founded the club from zero. Structured teams, defined roles by strength, managed onboarding, and tracked engagement data to identify talent gaps."
     }
   ],
   "projects": [
     {
-      "title": "Project Obsidian",
-      "description": "A minimalist operating system interface built entirely in browser technologies.",
-      "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
+      "title": "HR Management System, SaaS Platform",
+      "description": "Product Lead. Led requirement analysis and resource planning; identified bottlenecks, realigned talent allocation, and tracked KPIs across Agile sprints.",
+      "image": "",
       "link": "#"
     },
     {
-      "title": "Nexus Core",
-      "description": "High-frequency trading dashboard with real-time WebGL data visualization.",
-      "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop",
+      "title": "FloatChat, AI Data Platform",
+      "description": "Smart India Hackathon 2025. Mapped individual strengths to workstreams, coordinated cross-functional delivery under competition constraints.",
+      "image": "",
       "link": "#"
     }
   ],
