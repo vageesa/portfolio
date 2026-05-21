@@ -152,7 +152,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const blogContainer = document.getElementById('blog-container');
     
     if (blogContainer) {
-        fetch(dataFile)
+        // Add a timestamp cache-buster so the browser doesn't load old blogs
+        const fetchUrl = dataFile + '?t=' + new Date().getTime();
+        
+        fetch(fetchUrl)
             .then(response => response.json())
             .then(data => {
                 // Populate About Text if available
