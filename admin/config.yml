@@ -8,12 +8,13 @@ public_folder: "/images/uploads"
 
 collections:
   - name: "blogs"
-    label: "Blogs"
+    label: "Content"
     files:
-      - label: "Professional Blogs"
+      - label: "Professional Mode"
         name: "professional"
         file: "data/professional.json"
         fields:
+          - {label: "About Text", name: "about_text", widget: "text", required: false}
           - label: "Posts"
             name: "posts"
             widget: "list"
@@ -22,10 +23,11 @@ collections:
               - {label: "Category", name: "category", widget: "string"}
               - {label: "Date", name: "date", widget: "string"}
               - {label: "Excerpt", name: "excerpt", widget: "text"}
-      - label: "Hobby Blogs"
+      - label: "Hobby Mode"
         name: "hobby"
         file: "data/hobby.json"
         fields:
+          - {label: "About Text", name: "about_text", widget: "text", required: false}
           - label: "Posts"
             name: "posts"
             widget: "list"

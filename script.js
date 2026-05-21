@@ -155,6 +155,12 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch(dataFile)
             .then(response => response.json())
             .then(data => {
+                // Populate About Text if available
+                const aboutElement = document.getElementById('about-text');
+                if (aboutElement && data.about_text) {
+                    aboutElement.innerText = data.about_text;
+                }
+
                 const posts = data.posts || [];
                 posts.forEach(post => {
                     const article = document.createElement('article');
