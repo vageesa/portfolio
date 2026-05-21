@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #0a0a0c;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vageesa | Creative Operator</title>
+    <meta name="description" content="Multidisciplinary creator bridging structured systems and raw human expression.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600&family=Oswald:wght@500;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="hobby-mode">
+    <div id="transition-overlay" class="page-transition"></div>
+    <div class="custom-cursor"></div>
+    <div class="noise-overlay"></div>
+    
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#blog">Blog</a>
+        </div>
+        <div class="nav-right">
+            <button id="mode-toggle" class="mode-btn">
+                <span class="btn-text">Professional Mode</span>
+                <div class="btn-glow"></div>
+            </button>
+        </div>
+    </nav>
+
+    <main data-scroll-container>
+        <section id="hero" class="hero-section boxed-section">
+            <div class="hero-content">
+                <h1 class="giant-text" id="hero-watermark">VAGEESA</h1>
+                <div class="hero-sub">
+                    <p>Late night tinkerer, engine builder, and digital explorer living in the neon glow.</p>
+                </div>
+                <div class="hero-actions">
+                    <a href="#dashboard" class="btn btn-primary">View Dashboard</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+            <div class="grid-overlay"></div>
+        </section>
+
+        <section id="about" class="about-section boxed-section grid-layout">
+            <div class="section-header">
+                <h2 class="scroll-reveal">01 // ABOUT</h2>
+            </div>
+            <div class="about-content scroll-reveal">
+                <p class="large-body">I explore the chaos of creativity through gaming, fixing broken engines, and immersing myself in 90s cyber-aesthetics. Life without play is just a system.</p>
+            </div>
+        </section>
+
+        <section id="experience" class="experience-section boxed-section">
+            <div class="section-header">
+                <h2 class="scroll-reveal">02 // MILESTONES</h2>
+            </div>
+            <div class="timeline scroll-reveal">
+                <div class="timeline-item">
+                    <div class="timeline-meta">2026</div>
+                    <div class="timeline-content">
+                        <h3>Diamond Rank</h3>
+                        <p>Apex Legends Season 21</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-meta">2025</div>
+                    <div class="timeline-content">
+                        <h3>Project R34</h3>
+                        <p>Skyline Engine Rebuild Complete</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dashboard" class="projects-section boxed-section">
+            <div class="section-header">
+                <h2 class="scroll-reveal">03 // DASHBOARD</h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Project cards will go here -->
+                <article class="project-card scroll-reveal">
+                    <div class="project-img placeholder-img" style="background: url('https://picsum.photos/seed/pc/400/300') center/cover;"></div>
+                    <div class="project-info">
+                        <h3>Battle Station Build</h3>
+                        <p>Custom water-cooled loop with neon accents.</p>
+                    </div>
+                </article>
+                <article class="project-card scroll-reveal">
+                    <div class="project-img placeholder-img" style="background: url('https://picsum.photos/seed/engine/400/300') center/cover;"></div>
+                    <div class="project-info">
+                        <h3>Engine Rebuild</h3>
+                        <p>Restoring a classic JDM legend.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="blog" class="blog-section boxed-section">
+            <div class="section-header">
+                <h2 class="scroll-reveal">04 // BLOG</h2>
+            </div>
+            <div id="blog-container" class="blog-grid scroll-reveal">
+                <!-- Blog cards injected via JS -->
+            </div>
+        </section>
+
+        <section id="labs" class="labs-section boxed-section">
+            <div class="section-header">
+                <h2 class="scroll-reveal">05 // LABS</h2>
+            </div>
+            <div class="labs-content scroll-reveal">
+                <div class="lab-item">
+                    <h3>Kinetic Type Experiment</h3>
+                    <p>Testing scroll velocity vs typography distortion.</p>
+                </div>
+                <div class="lab-item">
+                    <h3>Shader Tests</h3>
+                    <p>WebGL explorations for cinematic web experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section boxed-section">
+            <div class="section-header">
+                <h2 class="scroll-reveal">06 // CONTACT</h2>
+            </div>
+            <div class="contact-content scroll-reveal">
+                <h1 class="giant-text">LET'S BUILD</h1>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

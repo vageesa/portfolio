@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #F5F5F2;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vageesa | Creative Operator</title>
+    <meta name="description" content="Multidisciplinary creator bridging structured systems and raw human expression.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600&family=Oswald:wght@500;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="professional-mode">
+    <div id="transition-overlay" class="page-transition"></div>
+    <div class="custom-cursor"></div>
+    <div class="noise-overlay"></div>
+    
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Work</a>
+            <a href="#blog">Blog</a>
+        </div>
+        <div class="nav-right">
+            <button id="mode-toggle" class="mode-btn">
+                <span class="btn-text">Hobby Mode</span>
+                <div class="btn-glow"></div>
+            </button>
+        </div>
+    </nav>
+
+    <main data-scroll-container>
+        <section id="hero" class="hero-section boxed-section">
+            <div class="hero-content">
+                <h1 class="giant-text" id="hero-watermark">VAGEESA</h1>
+                <div class="hero-sub">
+                    <p>Multidisciplinary creator bridging structured systems and raw human expression.</p>
+                </div>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View Portfolio</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+            <div class="grid-overlay"></div>
+        </section>
+
+        <section id="about" class="about-section boxed-section grid-layout">
+            <div class="section-header">
+                <h2 class="scroll-reveal">01 // ABOUT</h2>
+            </div>
+            <div class="about-content scroll-reveal">
+                <p class="large-body">I operate at the intersection of logical product building and experimental visual storytelling. Every pixel has a purpose.</p>
+            </div>
+        </section>
+
+        <section id="experience" class="experience-section boxed-section">
+            <div class="section-header">
+                <h2 class="scroll-reveal">02 // EXPERIENCE</h2>
+            </div>
+            <div class="timeline scroll-reveal">
+                <div class="timeline-item">
+                    <div class="timeline-meta">2023 — Present</div>
+                    <div class="timeline-content">
+                        <h3>Creative Operator</h3>
+                        <p>Independent Studio</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-meta">2021 — 2023</div>
+                    <div class="timeline-content">
+                        <h3>Product Builder</h3>
+                        <p>Tech Ventures</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section boxed-section">
+            <div class="section-header">
+                <h2 class="scroll-reveal">03 // PROJECTS</h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Project cards will go here -->
+                <article class="project-card scroll-reveal">
+                    <div class="project-img placeholder-img"></div>
+                    <div class="project-info">
+                        <h3>System Alpha</h3>
+                        <p>A structured approach to data visualization.</p>
+                    </div>
+                </article>
+                <article class="project-card scroll-reveal">
+                    <div class="project-img placeholder-img"></div>
+                    <div class="project-info">
+                        <h3>Neon Protocol</h3>
+                        <p>Experimental web interactions and glow aesthetics.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="blog" class="blog-section boxed-section">
+            <div class="section-header">
+                <h2 class="scroll-reveal">04 // BLOG</h2>
+            </div>
+            <div id="blog-container" class="blog-grid scroll-reveal">
+                <!-- Blog cards injected via JS -->
+            </div>
+        </section>
+
+        <section id="labs" class="labs-section boxed-section">
+            <div class="section-header">
+                <h2 class="scroll-reveal">05 // LABS</h2>
+            </div>
+            <div class="labs-content scroll-reveal">
+                <div class="lab-item">
+                    <h3>Kinetic Type Experiment</h3>
+                    <p>Testing scroll velocity vs typography distortion.</p>
+                </div>
+                <div class="lab-item">
+                    <h3>Shader Tests</h3>
+                    <p>WebGL explorations for cinematic web experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section boxed-section">
+            <div class="section-header">
+                <h2 class="scroll-reveal">06 // CONTACT</h2>
+            </div>
+            <div class="contact-content scroll-reveal">
+                <h1 class="giant-text">LET'S BUILD</h1>
+                
+                <div class="social-links" style="margin-top: 3rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <a href="https://linkedin.com/in/vageesa" target="_blank" class="btn btn-outline">LinkedIn</a>
+                    <a href="https://github.com/vageesa" target="_blank" class="btn btn-outline">GitHub</a>
+                    <a href="https://leetcode.com/u/vageesa_sarma/" target="_blank" class="btn btn-outline">LeetCode</a>
+                    <a href="mailto:vageesamusunuri@gmail.com" class="btn btn-primary">Email Me</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
