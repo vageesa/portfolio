@@ -1,5 +1,36 @@
 {
   "about_text": "A student from Indian Institute of Information Technology Nagpur",
+  "experience": [
+    {
+      "year": "2026 - Present",
+      "title": "Lead Engineer @ Neural Forge",
+      "description": "Architecting decentralized data models. Rebuilt the core matching engine from scratch, reducing latency by 40%."
+    },
+    {
+      "year": "2024 - 2026",
+      "title": "Full Stack Developer @ VoidTech",
+      "description": "Spearheaded the dark-mode first design system. Developed the primary consumer facing dashboard used by 10k+ daily active users."
+    },
+    {
+      "year": "2023 - 2024",
+      "title": "Freelance Creator",
+      "description": "Built bespoke web experiences for boutique design agencies. Focused on WebGL and high-performance animations."
+    }
+  ],
+  "projects": [
+    {
+      "title": "Project Obsidian",
+      "description": "A minimalist operating system interface built entirely in browser technologies.",
+      "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
+      "link": "#"
+    },
+    {
+      "title": "Nexus Core",
+      "description": "High-frequency trading dashboard with real-time WebGL data visualization.",
+      "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop",
+      "link": "#"
+    }
+  ],
   "posts": [
     {
       "title": "Building Systems That Scale",

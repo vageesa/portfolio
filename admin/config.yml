@@ -15,6 +15,23 @@ collections:
         file: "data/professional.json"
         fields:
           - {label: "About Text", name: "about_text", widget: "text", required: false}
+          - label: "Experience"
+            name: "experience"
+            widget: "list"
+            required: false
+            fields:
+              - {label: "Year/Period", name: "year", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            required: false
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Image", name: "image", widget: "image", required: false}
+              - {label: "Link URL", name: "link", widget: "string", required: false}
           - label: "Posts"
             name: "posts"
             widget: "list"
@@ -28,6 +45,23 @@ collections:
         file: "data/hobby.json"
         fields:
           - {label: "About Text", name: "about_text", widget: "text", required: false}
+          - label: "Milestones"
+            name: "experience"
+            widget: "list"
+            required: false
+            fields:
+              - {label: "Year/Period", name: "year", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+          - label: "Creations"
+            name: "projects"
+            widget: "list"
+            required: false
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Image", name: "image", widget: "image", required: false}
+              - {label: "Link URL", name: "link", widget: "string", required: false}
           - label: "Posts"
             name: "posts"
             widget: "list"

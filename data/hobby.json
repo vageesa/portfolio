@@ -1,5 +1,36 @@
 {
   "about_text": "I explore the chaos of creativity through gaming, fixing broken engines, and immersing myself in 90s cyber-aesthetics. Life without play is just a system.",
+  "experience": [
+    {
+      "year": "2026 - Present",
+      "title": "Master Builder",
+      "description": "Currently constructing a 1/8th scale fully functional jet engine. Documenting the process through 3D renders."
+    },
+    {
+      "year": "2024 - 2026",
+      "title": "Retro Modder",
+      "description": "Restored and heavily modified classic arcade cabinets. Integrated modern hardware while preserving CRT scanlines."
+    },
+    {
+      "year": "2023 - 2024",
+      "title": "Digital Nomad",
+      "description": "Traveled across 14 countries while building open-source tools for the speedrunning community."
+    }
+  ],
+  "projects": [
+    {
+      "title": "CyberDeck Mk. IV",
+      "description": "Custom-built portable terminal using mechanical switches and a split ortholinear layout.",
+      "image": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1000&auto=format&fit=crop",
+      "link": "#"
+    },
+    {
+      "title": "Neon Dreams",
+      "description": "A photography series exploring the night aesthetics of Tokyo and Seoul.",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop",
+      "link": "#"
+    }
+  ],
   "posts": [
     {
       "title": "Tuning the Engine",

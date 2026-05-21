@@ -164,6 +164,42 @@ document.addEventListener('DOMContentLoaded', () => {
                     aboutElement.innerText = data.about_text;
                 }
 
+                // Populate Experience Timeline if available
+                const expContainer = document.getElementById('experience-container');
+                if (expContainer && data.experience) {
+                    data.experience.forEach(exp => {
+                        const div = document.createElement('div');
+                        div.className = 'timeline-item';
+                        div.innerHTML = `
+                            <div class="timeline-meta">${exp.year || ''}</div>
+                            <div class="timeline-content">
+                                <h3>${exp.title || ''}</h3>
+                                <p>${exp.description || ''}</p>
+                            </div>
+                        `;
+                        expContainer.appendChild(div);
+                    });
+                }
+
+                // Populate Projects Grid if available
+                const projContainer = document.getElementById('projects-container');
+                if (projContainer && data.projects) {
+                    data.projects.forEach(proj => {
+                        const div = document.createElement('div');
+                        div.className = 'project-card scroll-reveal';
+                        const imageStyle = proj.image ? `background-image: url('${proj.image}');` : `background: #333;`;
+                        div.innerHTML = `
+                            <div class="project-img placeholder-img" style="${imageStyle}"></div>
+                            <div class="project-info">
+                                <h3>${proj.title || ''}</h3>
+                                <p>${proj.description || ''}</p>
+                                <a href="${proj.link || '#'}" class="btn btn-outline btn-sm" target="_blank">Case Study</a>
+                            </div>
+                        `;
+                        projContainer.appendChild(div);
+                    });
+                }
+
                 const posts = data.posts || [];
                 posts.forEach(post => {
                     const article = document.createElement('article');
