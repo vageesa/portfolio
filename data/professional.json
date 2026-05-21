@@ -32,13 +32,17 @@
       "title": "HR Management System, SaaS Platform",
       "description": "Product Lead. Led requirement analysis and resource planning; identified bottlenecks, realigned talent allocation, and tracked KPIs across Agile sprints.",
       "image": "",
-      "link": "#"
+      "link": "#",
+      "link_label": "Case Study",
+      "github_link": ""
     },
     {
       "title": "FloatChat, AI Data Platform",
       "description": "Smart India Hackathon 2025. Mapped individual strengths to workstreams, coordinated cross-functional delivery under competition constraints.",
       "image": "/images/uploads/floatchat.png",
-      "link": "https://canva.link/bs3oq7yl39uqtng"
+      "link": "https://canva.link/bs3oq7yl39uqtng",
+      "link_label": "Case Study",
+      "github_link": ""
     }
   ],
   "posts": [
