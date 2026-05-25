@@ -4,7 +4,7 @@ backend:
   branch: master
 
 media_folder: "images/uploads"
-public_folder: "/images/uploads"
+public_folder: "images/uploads"
 
 collections:
   - name: "blogs"

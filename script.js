@@ -187,7 +187,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     data.projects.forEach(proj => {
                         const div = document.createElement('div');
                         div.className = 'project-card scroll-reveal';
-                        const imageStyle = proj.image ? `background-image: url('${proj.image}');` : `background: #333;`;
+                        let imgPath = proj.image;
+                        if (imgPath && imgPath.startsWith('/')) {
+                            imgPath = imgPath.substring(1);
+                        }
+                        const imageStyle = imgPath ? `background-image: url('${imgPath}');` : `background: #333;`;
                         div.innerHTML = `
                             <div class="project-img placeholder-img" style="${imageStyle}"></div>
                             <div class="project-info">
