@@ -145,17 +145,15 @@ body.hobby-mode .stickers-container {
     filter: brightness(0) invert(1);
     transition: var(--transition-cinematic);
     max-width: 300px;
-    pointer-events: auto;
 }
 
 .transparent-sticker {
     position: absolute;
     opacity: 0.15;
-    filter: grayscale(100%);
+    filter: grayscale(80%);
     transition: var(--transition-cinematic);
     max-width: 450px;
     z-index: 0;
-    pointer-events: auto;
 }
 
 body.hobby-mode .sticker:hover {
@@ -164,7 +162,7 @@ body.hobby-mode .sticker:hover {
 }
 
 body.hobby-mode .transparent-sticker:hover {
-    opacity: 1;
+    opacity: 0.75;
     filter: grayscale(0%);
     z-index: 10;
 }
