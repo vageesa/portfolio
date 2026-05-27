@@ -142,14 +142,14 @@ body.hobby-mode .stickers-container {
 .sticker {
     position: absolute;
     opacity: 0.15;
-    filter: grayscale(100%) contrast(200%);
+    filter: brightness(0) invert(1);
     transition: var(--transition-cinematic);
     max-width: 300px;
 }
 
 body.hobby-mode .sticker:hover {
-    opacity: 0.3;
-    filter: grayscale(0%) drop-shadow(0 0 20px var(--accent-primary));
+    opacity: 0.5;
+    filter: brightness(0) invert(1) drop-shadow(0 0 20px var(--accent-primary));
 }
 
 .sticker-1 { top: 10%; left: 5%; transform: rotate(-15deg) scale(1.2); }
