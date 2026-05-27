@@ -269,7 +269,6 @@ body.hobby-mode .giant-text {
     color: var(--text-muted);
 }
 
-/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -278,17 +277,18 @@ body.hobby-mode .giant-text {
     justify-content: flex-end;
     align-items: center;
     padding: var(--spacing-sm) var(--spacing-md);
-    background: rgba(245, 245, 242, 0.4); /* Glass effect on light mode */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(26, 26, 26, 0.05); /* very subtle edge */
+    background: transparent;
     z-index: 100;
     transition: var(--transition-cinematic);
+    pointer-events: none; /* Let clicks pass through the empty space */
+}
+
+.navbar > * {
+    pointer-events: auto; /* Re-enable clicks on children */
 }
 
 body.hobby-mode .navbar {
-    background: rgba(10, 10, 12, 0.4);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: transparent;
 }
 
 .nav-links {
@@ -299,6 +299,17 @@ body.hobby-mode .navbar {
     align-items: center;
     /* Increased duration to 1.5s and used an ease-in-out curve for a much slower, graceful slide */
     transition: all 1.5s cubic-bezier(0.4, 0.0, 0.2, 1); 
+    background: rgba(245, 245, 242, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(26, 26, 26, 0.05);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+}
+
+body.hobby-mode .nav-links {
+    background: rgba(10, 10, 12, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 body.scrolled .nav-links {
@@ -353,10 +364,13 @@ body.hobby-mode .nav-links a::after {
 
 /* Mode Button */
 .mode-btn {
-    background: transparent;
-    border: var(--border-width) solid var(--border-main);
+    background: rgba(245, 245, 242, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(26, 26, 26, 0.05);
     color: var(--text-main);
     padding: 0.5rem 1rem;
+    border-radius: 50px;
     font-family: var(--font-mono);
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -364,6 +378,11 @@ body.hobby-mode .nav-links a::after {
     position: relative;
     overflow: hidden;
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.4s ease, border-color 0.4s ease;
+}
+
+body.hobby-mode .mode-btn {
+    background: rgba(10, 10, 12, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .mode-btn:hover {
