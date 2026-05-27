@@ -260,11 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         const scl = sticker.scale || '1.0';
                         const hov = sticker.hover_opacity || '1.0';
                         
-                        img.style.setProperty('--tx', '0px');
-                        img.style.setProperty('--rot', rot);
-                        img.style.setProperty('--scl', scl);
-                        img.style.setProperty('--hover-opacity', hov);
-                        
+                        styleStr += `--tx: 0px; --rot: ${rot}; --scl: ${scl}; --hover-opacity: ${hov}; `;
                         styleStr += `transform: translateX(var(--tx)) rotate(var(--rot)) scale(var(--scl)); `;
                         
                         if (sticker.opacity) styleStr += `opacity: ${sticker.opacity}; `;
