@@ -714,4 +714,36 @@ body.hobby-mode .giant-link:hover {
     clip-path: circle(0% at var(--origin-x) var(--origin-y));
 }
 
-
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+        padding: 1rem;
+    }
+    
+    /* Move nav links to a floating bottom bar on mobile for better ergonomics */
+    .nav-links {
+        position: fixed;
+        bottom: 2rem;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: max-content;
+        z-index: 105;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    /* Override the scroll behavior on mobile so it stays bottom centered */
+    body.scrolled .nav-links {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .nav-right {
+        margin: 0;
+    }
+    
+    .hero-title {
+        font-size: 12vw;
+    }
+}
