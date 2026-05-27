@@ -147,14 +147,13 @@ body.hobby-mode .stickers-container {
     max-width: 300px;
 }
 
-.photo-sticker {
+.transparent-sticker {
     position: absolute;
-    opacity: 0.2;
-    mix-blend-mode: screen;
+    opacity: 0.15;
     filter: grayscale(80%);
     transition: var(--transition-cinematic);
     max-width: 450px;
-    border-radius: 12px;
+    z-index: 0;
 }
 
 body.hobby-mode .sticker:hover {
@@ -162,10 +161,9 @@ body.hobby-mode .sticker:hover {
     filter: brightness(0) invert(1) drop-shadow(0 0 20px var(--accent-primary));
 }
 
-body.hobby-mode .photo-sticker:hover {
-    opacity: 0.6;
+body.hobby-mode .transparent-sticker:hover {
+    opacity: 0.75;
     filter: grayscale(0%);
-    mix-blend-mode: normal;
     z-index: 10;
 }
 
