@@ -222,6 +222,53 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     blogContainer.appendChild(article);
                 });
+
+                // Populate Background Stickers if available (Hobby Mode)
+                if (data.stickers && data.stickers.length > 0) {
+                    let stickersContainer = document.querySelector('.stickers-container');
+                    if (!stickersContainer) {
+                        stickersContainer = document.createElement('div');
+                        stickersContainer.className = 'stickers-container';
+                        // Insert it at the very beginning of the body
+                        document.body.insertBefore(stickersContainer, document.body.firstChild);
+                    }
+                    
+                    data.stickers.forEach((sticker, index) => {
+                        const img = document.createElement('img');
+                        let imgPath = sticker.image;
+                        if (imgPath && imgPath.startsWith('/')) {
+                            imgPath = imgPath.substring(1);
+                        }
+                        img.src = imgPath;
+                        img.alt = sticker.alt || 'Sticker';
+                        
+                        // Use transparent-sticker as base class. If it's an SVG, maybe add generic .sticker class.
+                        img.className = 'transparent-sticker sticker-dynamic scroll-reveal';
+                        if (sticker.is_svg) {
+                            img.classList.remove('transparent-sticker');
+                            img.classList.add('sticker');
+                        }
+
+                        // Apply inline styles based on CMS config
+                        let styleStr = '';
+                        if (sticker.top && sticker.top !== 'auto') styleStr += `top: ${sticker.top}; `;
+                        if (sticker.bottom && sticker.bottom !== 'auto') styleStr += `bottom: ${sticker.bottom}; `;
+                        if (sticker.left && sticker.left !== 'auto') styleStr += `left: ${sticker.left}; `;
+                        if (sticker.right && sticker.right !== 'auto') styleStr += `right: ${sticker.right}; `;
+                        
+                        const rot = sticker.rotation || '0deg';
+                        const scl = sticker.scale || '1.0';
+                        styleStr += `transform: rotate(${rot}) scale(${scl}); `;
+                        
+                        if (sticker.opacity) styleStr += `opacity: ${sticker.opacity}; `;
+                        if (sticker.blend_mode && sticker.blend_mode !== 'normal') {
+                            styleStr += `mix-blend-mode: ${sticker.blend_mode}; `;
+                        }
+                        
+                        img.setAttribute('style', styleStr);
+                        stickersContainer.appendChild(img);
+                    });
+                }
                 
                 // Re-observe newly added elements across all dynamic containers
                 const newReveals = document.querySelectorAll('#experience-container .scroll-reveal, #projects-container .scroll-reveal, #blog-container .scroll-reveal, .project-card.scroll-reveal');

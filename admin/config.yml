@@ -74,3 +74,19 @@ collections:
               - {label: "Category", name: "category", widget: "string"}
               - {label: "Date", name: "date", widget: "string"}
               - {label: "Excerpt", name: "excerpt", widget: "text"}
+          - label: "Background Stickers"
+            name: "stickers"
+            widget: "list"
+            required: false
+            fields:
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Alt Text", name: "alt", widget: "string", default: "Sticker"}
+              - {label: "Vertical Position (e.g. 10%, 50px, auto)", name: "top", widget: "string", default: "10%"}
+              - {label: "Horizontal Position (e.g. 10%, 50px, auto)", name: "left", widget: "string", default: "10%"}
+              - {label: "Right Position (Optional, overrides left)", name: "right", widget: "string", default: "auto", required: false}
+              - {label: "Bottom Position (Optional, overrides top)", name: "bottom", widget: "string", default: "auto", required: false}
+              - {label: "Rotation (e.g. 15deg, -10deg)", name: "rotation", widget: "string", default: "0deg"}
+              - {label: "Scale (e.g. 1.2 for 120%)", name: "scale", widget: "string", default: "1.0"}
+              - {label: "Base Opacity (0.0 to 1.0)", name: "opacity", widget: "string", default: "0.15"}
+              - {label: "Blend Mode (normal, screen, multiply)", name: "blend_mode", widget: "select", options: ["normal", "screen", "multiply", "overlay", "lighten", "darken"], default: "normal"}
+              - {label: "Is pure black/white SVG?", name: "is_svg", widget: "boolean", default: false, required: false}
