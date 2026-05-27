@@ -169,6 +169,16 @@ body.hobby-mode .transparent-sticker:hover {
     z-index: 10;
 }
 
+/* Special Request for Luffy Sticker */
+img[alt="Luffy"] {
+    filter: grayscale(100%);
+    z-index: 100 !important; /* Bring Luffy above Vageesa (main content) */
+}
+img[alt="Luffy"]:hover {
+    filter: grayscale(0%);
+    opacity: 1 !important;
+}
+
 .sticker-1 { top: 10%; left: 5%; transform: rotate(-15deg) scale(1.2); }
 .sticker-2 { top: 60%; right: 5%; transform: rotate(10deg) scale(0.8); }
 .sticker-3 { top: 40%; left: 10%; transform: rotate(-5deg) scale(1.5); opacity: 0.1; }
