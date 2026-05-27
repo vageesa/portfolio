@@ -61,10 +61,10 @@
     {
       "image": "/images/uploads/max-sticker.png",
       "alt": "Max Verstappen",
-      "top": "10%",
+      "top": "auto",
       "left": "5%",
       "right": "auto",
-      "bottom": "auto",
+      "bottom": "5%",
       "rotation": "-15deg",
       "scale": "0.5",
       "opacity": "0.15",
@@ -72,17 +72,56 @@
       "is_svg": false
     },
     {
-      "image": "/images/uploads/redbull-sticker.png",
-      "alt": "Red Bull",
-      "top": "60%",
+      "image": "/images/uploads/kimi-sticker.png",
+      "alt": "Kimi Antonelli",
+      "top": "auto",
       "left": "auto",
       "right": "5%",
-      "bottom": "auto",
+      "bottom": "5%",
       "rotation": "10deg",
+      "scale": "0.5",
+      "opacity": "0.15",
+      "blend_mode": "normal",
+      "is_svg": false
+    },
+    {
+      "image": "/images/uploads/valorant-sticker.svg",
+      "alt": "Valorant",
+      "top": "auto",
+      "left": "45%",
+      "right": "auto",
+      "bottom": "5%",
+      "rotation": "0deg",
+      "scale": "0.9",
+      "opacity": "0.15",
+      "blend_mode": "normal",
+      "is_svg": true
+    },
+    {
+      "image": "/images/uploads/redbull-sticker.png",
+      "alt": "Red Bull",
+      "top": "10%",
+      "left": "40%",
+      "right": "auto",
+      "bottom": "auto",
+      "rotation": "5deg",
       "scale": "0.8",
       "opacity": "0.15",
       "blend_mode": "normal",
       "is_svg": false
+    },
+    {
+      "image": "/images/uploads/f1-sticker.svg",
+      "alt": "Formula 1",
+      "top": "10%",
+      "left": "55%",
+      "right": "auto",
+      "bottom": "auto",
+      "rotation": "-5deg",
+      "scale": "0.8",
+      "opacity": "0.15",
+      "blend_mode": "normal",
+      "is_svg": true
     },
     {
       "image": "/images/uploads/luffy-sticker.png",
@@ -96,32 +135,6 @@
       "opacity": "0.15",
       "blend_mode": "multiply",
       "is_svg": false
-    },
-    {
-      "image": "/images/uploads/kimi-sticker.png",
-      "alt": "Kimi Antonelli",
-      "top": "auto",
-      "left": "30%",
-      "right": "auto",
-      "bottom": "10%",
-      "rotation": "20deg",
-      "scale": "0.5",
-      "opacity": "0.15",
-      "blend_mode": "normal",
-      "is_svg": false
-    },
-    {
-      "image": "/images/uploads/valorant-sticker.svg",
-      "alt": "Valorant",
-      "top": "20%",
-      "left": "auto",
-      "right": "15%",
-      "bottom": "auto",
-      "rotation": "-25deg",
-      "scale": "0.9",
-      "opacity": "0.15",
-      "blend_mode": "normal",
-      "is_svg": true
     }
   ]
 }
