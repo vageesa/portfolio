@@ -164,7 +164,7 @@ body.hobby-mode .sticker:hover {
 }
 
 body.hobby-mode .transparent-sticker:hover {
-    opacity: 0.75;
+    opacity: var(--hover-opacity, 0.75) !important;
     filter: grayscale(0%);
     z-index: 10;
 }

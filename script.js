@@ -258,7 +258,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         
                         const rot = sticker.rotation || '0deg';
                         const scl = sticker.scale || '1.0';
-                        styleStr += `transform: rotate(${rot}) scale(${scl}); `;
+                        const hov = sticker.hover_opacity || '1.0';
+                        
+                        img.style.setProperty('--tx', '0px');
+                        img.style.setProperty('--rot', rot);
+                        img.style.setProperty('--scl', scl);
+                        img.style.setProperty('--hover-opacity', hov);
+                        
+                        styleStr += `transform: translateX(var(--tx)) rotate(var(--rot)) scale(var(--scl)); `;
                         
                         if (sticker.opacity) styleStr += `opacity: ${sticker.opacity}; `;
                         if (sticker.blend_mode && sticker.blend_mode !== 'normal') {
@@ -272,6 +279,28 @@ document.addEventListener('DOMContentLoaded', () => {
                         makeDraggable(img, stickerId);
                         
                         stickersContainer.appendChild(img);
+                    });
+
+                    // Add scroll effect for stickers
+                    window.addEventListener('scroll', () => {
+                        const scrolled = window.scrollY;
+                        document.querySelectorAll('.sticker-dynamic').forEach(sticker => {
+                            // Find out if sticker is on left or right half
+                            const rect = sticker.getBoundingClientRect();
+                            // Use left offset percentage if available, or bounding box center
+                            let direction = 1;
+                            if (sticker.style.left && sticker.style.left.includes('%')) {
+                                direction = parseFloat(sticker.style.left) < 50 ? -1 : 1;
+                            } else {
+                                const centerX = rect.left + (rect.width / 2);
+                                direction = centerX < window.innerWidth / 2 ? -1 : 1;
+                            }
+                            
+                            // Calculate translation and fade out
+                            const moveSpeed = 1.2; // How fast it fans out
+                            const tx = scrolled * moveSpeed * direction;
+                            sticker.style.setProperty('--tx', `${tx}px`);
+                        });
                     });
                 }
                 
@@ -310,20 +339,14 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentScale = 1.0;
         let currentRotation = '0deg';
         
-        // Parse initial transform if present, e.g., "rotate(10deg) scale(0.5)"
-        const transformStr = element.style.transform;
-        if (transformStr) {
-            const scaleMatch = transformStr.match(/scale\(([^)]+)\)/);
-            if (scaleMatch) currentScale = parseFloat(scaleMatch[1]);
-            
-            const rotMatch = transformStr.match(/rotate\(([^)]+)\)/);
-            if (rotMatch) currentRotation = rotMatch[1];
-        }
+        // Use custom properties instead of parsing strings
+        currentScale = parseFloat(element.style.getPropertyValue('--scl')) || 1.0;
+        currentRotation = element.style.getPropertyValue('--rot') || '0deg';
         
         // Apply saved scale if exists
         if (savedScale) {
             currentScale = parseFloat(savedScale);
-            element.style.transform = `rotate(${currentRotation}) scale(${currentScale})`;
+            element.style.setProperty('--scl', currentScale);
         }
 
         element.addEventListener('dblclick', (e) => {
@@ -355,7 +378,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentScale < 0.2) currentScale = 0.2;
             if (currentScale > 4.0) currentScale = 4.0;
             
-            element.style.transform = `rotate(${currentRotation}) scale(${currentScale})`;
+            element.style.setProperty('--scl', currentScale);
             localStorage.setItem('scale_' + stickerId, currentScale);
         });
 
