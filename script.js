@@ -292,9 +292,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Check local storage for saved lock state and positions
         let isLocked = localStorage.getItem('lock_' + stickerId) === 'true';
         const savedPos = localStorage.getItem('pos_' + stickerId);
+        const savedScale = localStorage.getItem('scale_' + stickerId);
         
         element.style.cursor = isLocked ? 'default' : 'grab';
-        element.title = isLocked ? "Locked (Double-click to unlock)" : "Drag to move (Double-click to lock)";
+        element.title = isLocked ? "Locked (Double-click to unlock)" : "Drag to move, Scroll to resize (Double-click to lock)";
         
         if (savedPos) {
             try {
@@ -305,12 +306,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 element.style.right = 'auto';
             } catch(e) {}
         }
+        
+        let currentScale = 1.0;
+        let currentRotation = '0deg';
+        
+        // Parse initial transform if present, e.g., "rotate(10deg) scale(0.5)"
+        const transformStr = element.style.transform;
+        if (transformStr) {
+            const scaleMatch = transformStr.match(/scale\(([^)]+)\)/);
+            if (scaleMatch) currentScale = parseFloat(scaleMatch[1]);
+            
+            const rotMatch = transformStr.match(/rotate\(([^)]+)\)/);
+            if (rotMatch) currentRotation = rotMatch[1];
+        }
+        
+        // Apply saved scale if exists
+        if (savedScale) {
+            currentScale = parseFloat(savedScale);
+            element.style.transform = `rotate(${currentRotation}) scale(${currentScale})`;
+        }
 
         element.addEventListener('dblclick', (e) => {
             isLocked = !isLocked;
             localStorage.setItem('lock_' + stickerId, isLocked);
             element.style.cursor = isLocked ? 'default' : 'grab';
-            element.title = isLocked ? "Locked (Double-click to unlock)" : "Drag to move (Double-click to lock)";
+            element.title = isLocked ? "Locked (Double-click to unlock)" : "Drag to move, Scroll to resize (Double-click to lock)";
             
             // Visual feedback flash
             element.style.transition = 'filter 0.3s ease';
@@ -319,6 +339,24 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 element.style.filter = '';
             }, 300);
+        });
+
+        // Wheel to resize
+        element.addEventListener('wheel', (e) => {
+            if (isLocked) return;
+            e.preventDefault();
+            
+            if (e.deltaY < 0) {
+                currentScale += 0.05;
+            } else {
+                currentScale -= 0.05;
+            }
+            
+            if (currentScale < 0.2) currentScale = 0.2;
+            if (currentScale > 4.0) currentScale = 4.0;
+            
+            element.style.transform = `rotate(${currentRotation}) scale(${currentScale})`;
+            localStorage.setItem('scale_' + stickerId, currentScale);
         });
 
         element.addEventListener('mousedown', dragMouseDown);
