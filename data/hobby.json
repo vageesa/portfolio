@@ -1,60 +1,60 @@
 {
-  "about_text": "I explore the chaos of creativity through gaming, fixing broken engines, and immersing myself in 90s cyber-aesthetics. Life without play is just a system.",
+  "about_text": "I am a passionate and creative individual who enjoys exploring different forms of expression through esports, photography, video editing, and event management. I enjoy connecting with people, capturing moments, managing events, and contributing to communities that bring energy and excitement to college life.",
   "experience": [
     {
-      "year": "2026 - Present",
-      "title": "Master Builder",
-      "description": "Currently constructing a 1/8th scale fully functional jet engine. Documenting the process through 3D renders."
+      "year": "Present",
+      "title": "Founder, IIIT Nagpur Esports Club",
+      "description": "Helped build and manage the gaming community within the institute. Organized esports tournaments, managed gaming events, coordinated teams, and handled registrations."
     },
     {
-      "year": "2024 - 2026",
-      "title": "Retro Modder",
-      "description": "Restored and heavily modified classic arcade cabinets. Integrated modern hardware while preserving CRT scanlines."
+      "year": "2026",
+      "title": "Co-Lead – Hospitality, Abhivyakti 2026",
+      "description": "Co-Lead of the Hospitality Team for Abhivyakti 2026, the flagship cultural festival of IIIT Nagpur. Managed guest coordination, accommodation, volunteers, and on-ground operations."
     },
     {
-      "year": "2023 - 2024",
-      "title": "Digital Nomad",
-      "description": "Traveled across 14 countries while building open-source tools for the speedrunning community."
+      "year": "Ongoing",
+      "title": "Creative Explorer",
+      "description": "Exploring creative side quests outside academics through content creation, media work, event involvement, and collaborative activities."
     }
   ],
   "projects": [
     {
-      "title": "CyberDeck Mk. IV",
-      "description": "Custom-built portable terminal using mechanical switches and a split ortholinear layout.",
+      "title": "Visual Storytelling & Photography",
+      "description": "Capturing candid moments, events, emotions, and aesthetic visuals. Experimenting with angles, lighting, and compositions to tell stories through images.",
       "image": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1000&auto=format&fit=crop",
       "link": "#"
     },
     {
-      "title": "Neon Dreams",
-      "description": "A photography series exploring the night aesthetics of Tokyo and Seoul.",
+      "title": "Cinematic Video Editing",
+      "description": "Creating engaging visual content by combining clips, music, transitions, and effects. Specializing in event highlight videos, esports content, and reels.",
       "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop",
       "link": "#"
     }
   ],
   "posts": [
     {
-      "title": "Tuning the Engine",
-      "category": "Motorsport",
-      "date": "May 18, 2026",
-      "excerpt": "The joy of fixing things with your own hands."
+      "title": "Abhivyakti 2026: The Enchanted Circus",
+      "category": "Events",
+      "date": "2026",
+      "excerpt": "Managing hospitality and on-ground operations for a flagship cultural festival."
     },
     {
-      "title": "Late Night Gaming",
+      "title": "Building an Esports Community",
       "category": "Gaming",
-      "date": "May 12, 2026",
-      "excerpt": "Why retro games still hold up today."
+      "date": "2026",
+      "excerpt": "How competitive gaming shapes teamwork, leadership, and strategic thinking."
     },
     {
-      "title": "Synthwave Vibes",
-      "category": "Music",
-      "date": "May 05, 2026",
-      "excerpt": "Curating the perfect playlist for coding."
+      "title": "The Art of the Edit",
+      "category": "Video",
+      "date": "2026",
+      "excerpt": "Turning raw footage into impactful stories through creative video editing."
     },
     {
-      "title": "Anime Aesthetics",
-      "category": "Culture",
-      "date": "April 30, 2026",
-      "excerpt": "How 90s anime influences modern design."
+      "title": "Capturing Candid Moments",
+      "category": "Photography",
+      "date": "2026",
+      "excerpt": "My journey developing creative observation skills through photography."
     }
   ],
   "stickers": [
