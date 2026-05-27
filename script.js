@@ -266,6 +266,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                         
                         img.setAttribute('style', styleStr);
+                        
+                        // Initialize drag system
+                        const stickerId = 'sticker_' + (sticker.alt ? sticker.alt.replace(/\s+/g, '_').toLowerCase() : index);
+                        makeDraggable(img, stickerId);
+                        
                         stickersContainer.appendChild(img);
                     });
                 }
@@ -278,5 +283,84 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error("Error loading blog posts:", error);
                 blogContainer.innerHTML = '<p>Unable to load blog posts at this time.</p>';
             });
+    }
+
+    // --- Sticker Drag & Drop System ---
+    function makeDraggable(element, stickerId) {
+        let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+        
+        // Check local storage for saved lock state and positions
+        let isLocked = localStorage.getItem('lock_' + stickerId) === 'true';
+        const savedPos = localStorage.getItem('pos_' + stickerId);
+        
+        element.style.cursor = isLocked ? 'default' : 'grab';
+        element.title = isLocked ? "Locked (Double-click to unlock)" : "Drag to move (Double-click to lock)";
+        
+        if (savedPos) {
+            try {
+                const coords = JSON.parse(savedPos);
+                element.style.top = coords.top;
+                element.style.left = coords.left;
+                element.style.bottom = 'auto'; 
+                element.style.right = 'auto';
+            } catch(e) {}
+        }
+
+        element.addEventListener('dblclick', (e) => {
+            isLocked = !isLocked;
+            localStorage.setItem('lock_' + stickerId, isLocked);
+            element.style.cursor = isLocked ? 'default' : 'grab';
+            element.title = isLocked ? "Locked (Double-click to unlock)" : "Drag to move (Double-click to lock)";
+            
+            // Visual feedback flash
+            element.style.transition = 'filter 0.3s ease';
+            const originalFilter = element.style.filter;
+            element.style.filter = isLocked ? 'brightness(0.5) sepia(1)' : 'brightness(1.5)';
+            setTimeout(() => {
+                element.style.filter = '';
+            }, 300);
+        });
+
+        element.addEventListener('mousedown', dragMouseDown);
+        
+        function dragMouseDown(e) {
+            if (isLocked) return;
+            e.preventDefault();
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.addEventListener('mouseup', closeDragElement);
+            document.addEventListener('mousemove', elementDrag);
+            element.style.cursor = 'grabbing';
+            element.style.zIndex = '100';
+            element.style.transition = 'none'; // Disable transition while dragging
+        }
+
+        function elementDrag(e) {
+            e.preventDefault();
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            
+            element.style.bottom = 'auto';
+            element.style.right = 'auto';
+            
+            element.style.top = (element.offsetTop - pos2) + "px";
+            element.style.left = (element.offsetLeft - pos1) + "px";
+        }
+
+        function closeDragElement() {
+            document.removeEventListener('mouseup', closeDragElement);
+            document.removeEventListener('mousemove', elementDrag);
+            element.style.cursor = isLocked ? 'default' : 'grab';
+            element.style.zIndex = '';
+            element.style.transition = ''; // Restore transition
+            
+            // Save new position
+            localStorage.setItem('pos_' + stickerId, JSON.stringify({
+                top: element.style.top,
+                left: element.style.left
+            }));
+        }
     }
 });

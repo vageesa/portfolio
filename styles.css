@@ -145,6 +145,7 @@ body.hobby-mode .stickers-container {
     filter: brightness(0) invert(1);
     transition: var(--transition-cinematic);
     max-width: 300px;
+    pointer-events: auto;
 }
 
 .transparent-sticker {
@@ -154,6 +155,7 @@ body.hobby-mode .stickers-container {
     transition: var(--transition-cinematic);
     max-width: 450px;
     z-index: 0;
+    pointer-events: auto;
 }
 
 body.hobby-mode .sticker:hover {
