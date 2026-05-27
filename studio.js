@@ -127,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.addEventListener('mousemove', elementDrag);
             element.style.cursor = 'grabbing';
             element.style.zIndex = '100';
+            element.style.transition = 'none'; // Fix slow drag!
             editor.style.display = 'none'; // hide editor when dragging
         }
 
@@ -161,6 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.removeEventListener('mousemove', elementDrag);
             element.style.cursor = 'pointer';
             element.style.zIndex = '';
+            element.style.transition = ''; // Restore transition
         }
         
         function updateTransform(el, rot, scl) {

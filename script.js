@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             }
                             
                             // Calculate translation and fade out
-                            const moveSpeed = 1.2; // How fast it fans out
+                            const moveSpeed = 2.5; // Fanning speed
                             const tx = scrolled * moveSpeed * direction;
                             sticker.style.setProperty('--tx', `${tx}px`);
                         });
