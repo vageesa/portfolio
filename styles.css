@@ -119,7 +119,39 @@ body.hobby-mode .custom-cursor {
     transition: var(--transition-cinematic);
 }
 
-/* Grid overlay for professional mode */
+/* Hobby Mode Stickers Overlay */
+.stickers-container {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: -2;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+
+body.hobby-mode .stickers-container {
+    opacity: 1;
+}
+
+.sticker {
+    position: absolute;
+    opacity: 0.15;
+    filter: grayscale(100%) contrast(200%);
+    transition: var(--transition-cinematic);
+    max-width: 300px;
+}
+
+body.hobby-mode .sticker:hover {
+    opacity: 0.3;
+    filter: grayscale(0%) drop-shadow(0 0 20px var(--accent-primary));
+}
+
+.sticker-1 { top: 10%; left: 5%; transform: rotate(-15deg) scale(1.2); }
+.sticker-2 { top: 60%; right: 5%; transform: rotate(10deg) scale(0.8); }
+.sticker-3 { top: 40%; left: 10%; transform: rotate(-5deg) scale(1.5); opacity: 0.1; }
+.sticker-4 { bottom: 10%; left: 30%; transform: rotate(20deg) scale(1.1); }
+.sticker-5 { top: 20%; right: 15%; transform: rotate(-25deg) scale(0.9); }
 body:not(.hobby-mode) .grid-overlay {
     position: absolute;
     top: 0;
