@@ -124,10 +124,15 @@ body.hobby-mode .custom-cursor {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     pointer-events: none;
-    z-index: -2;
+    z-index: 0;
     overflow: hidden;
     opacity: 0;
     transition: opacity 1.2s ease;
+}
+
+main {
+    position: relative;
+    z-index: 1;
 }
 
 body.hobby-mode .stickers-container {
