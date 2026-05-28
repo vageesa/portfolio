@@ -198,8 +198,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <h3>${proj.title || ''}</h3>
                                 <p>${proj.description || ''}</p>
                                 <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: auto;">
-                                    ${proj.link ? `<a href="${proj.link}" class="btn btn-outline btn-sm" target="_blank">${proj.link_label || 'Case Study'}</a>` : ''}
-                                    ${proj.github_link ? `<a href="${proj.github_link}" class="btn btn-outline btn-sm" target="_blank" style="border-color: #333; color: inherit;">GitHub</a>` : ''}
+                                    ${proj.link ? `<a href="${proj.link}" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">${proj.link_label || 'Case Study'}</a>` : ''}
+                                    ${proj.github_link ? `<a href="${proj.github_link}" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer" style="border-color: #333; color: inherit;">GitHub</a>` : ''}
                                 </div>
                             </div>
                         `;
