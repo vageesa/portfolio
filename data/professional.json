@@ -55,22 +55,22 @@
   ],
   "posts": [
     {
-      "title": "Neon Aesthetics in Web3",
-      "category": "Design",
-      "date": "May 10, 2026",
-      "excerpt": "Why dark mode and glow effects dominate crypto UI."
+      "title": "Transitioning from Tech to Product Management",
+      "category": "Product Management",
+      "date": "May 2026",
+      "excerpt": "My journey from a developer mindset to thinking about user needs, resource allocation, and agile sprints during my internship."
     },
     {
-      "title": "Late Night Thoughts on Evangelion",
-      "category": "Culture",
-      "date": "May 02, 2026",
-      "excerpt": "Analyzing the visual language of 90s mecha anime."
+      "title": "Earning My Core Tech Certifications",
+      "category": "Certifications",
+      "date": "April 2026",
+      "excerpt": "A breakdown of the certifications I've completed to strengthen my technical foundation for product roles."
     },
     {
-      "title": "The Art of the Brutalist Web",
-      "category": "Engineering",
-      "date": "April 28, 2026",
-      "excerpt": "Returning to semantic HTML and bold borders."
+      "title": "Data-Driven Decisions in Student Communities",
+      "category": "Data Analysis",
+      "date": "March 2026",
+      "excerpt": "How tracking KPIs and analyzing engagement data helped me scale the GDG community and Esports club."
     }
   ]
 }
